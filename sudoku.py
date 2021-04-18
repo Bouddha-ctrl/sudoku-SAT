@@ -116,14 +116,14 @@ phi6 =[]
 f = open(os.path.join(sys.path[0], "sudoku.txt"), "r")
 i=0
 for x in f:
-    
+    print(x)
     x=x.replace('\n','').replace(' ','')
     for j in range(9):
-        if x[j]!='0 ':
+        if x[j]!='0':
             phi6.append([encode(i,j,int(x[j])-1)])
     i+=1
 
-#print(phi6)
+print(phi6)
 
 # Cette partie du programme lance le solveur SAT avec la conjonction des contraintes,
 # c'est-à-dire la concaténation des listes les représentant.
